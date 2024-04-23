@@ -1,0 +1,25 @@
+As redes neurais são modelos computacionais inspirados no funcionamento dos neurônios biológicos do cérebro humano. Elas são capazes de aprender padrões complexos nos dados de entrada e fazer previsões precisas.
+Vamos aplicar Redes Neurais para análise de crédito, a fim de prever se um cliente irá aceitar ou não uma oferta de empréstimo pessoal.
+
+Para treinar nosso modelo de rede neural, utilizaremos uma base de dados contendo informações de clientes de um banco.
+
+Essas informações incluem:
+
+Variáveis categóricas:
+Personal loan (Yes/No): nossa variável target, indicando se o cliente aceitou a oferta de empréstimo pessoal
+Possui conta de investimento no banco?
+Possui conta de depósito a prazo (CD) no banco?
+Usa serviços bancários online?
+Usa cartão de crédito emitido pelo banco?
+Variáveis contínuas:
+Idade
+Anos de experiência profissional
+Renda anual
+Gasto médio no cartão de crédito
+Valor do empréstimo para moradia
+Tamanho da família
+Nível educacional
+Algumas observações importantes sobre essas variáveis:
+
+A variável ID do cliente não traz informações úteis para nosso modelo preditivo, por isso pode ser descartada
+O código postal também não é relevante uma vez que não podemos calcular a distância entre códigos postais
