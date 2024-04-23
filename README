@@ -23,3 +23,12 @@ Algumas observações importantes sobre essas variáveis:
 
 A variável ID do cliente não traz informações úteis para nosso modelo preditivo, por isso pode ser descartada
 O código postal também não é relevante uma vez que não podemos calcular a distância entre códigos postais
+
+
+As principais etapas incluíram:
+
+Entendimento dos dados
+Pré-processamento e transformação das variáveis
+Treinamento de modelos neurais no Scikit-Learn
+Otimização dos hiperparâmetros com Grid Search
+Interpretação do modelo final
