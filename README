@@ -1,70 +1,97 @@
-As redes neurais são modelos computacionais inspirados no funcionamento dos neurônios biológicos do cérebro humano. Elas são capazes de aprender padrões complexos nos dados de entrada e fazer previsões precisas.
-Vamos aplicar Redes Neurais para análise de crédito, a fim de prever se um cliente irá aceitar ou não uma oferta de empréstimo pessoal.
+Previsão de Aceitação de Empréstimo Pessoal usando Redes Neurais
+Visão Geral
+Este projeto foca na previsão da aceitação de empréstimos pessoais por clientes usando redes neurais. O conjunto de dados contém várias características relacionadas à demografia dos clientes, status financeiro e comportamento bancário. Através de uma análise e modelagem cuidadosas, temos como objetivo construir um modelo preditivo que possa auxiliar instituições financeiras na identificação de potenciais clientes para empréstimos.
 
-Para treinar nosso modelo de rede neural, utilizaremos uma base de dados contendo informações de clientes de um banco.
+Descrição do Conjunto de Dados
+O conjunto de dados consiste em características tanto categóricas quanto contínuas:
 
-Essas informações incluem:
+Características Categóricas:
+Empréstimo Pessoal: Indica se o cliente aceitou o empréstimo pessoal oferecido na última campanha.
+Conta de Títulos: Se o cliente possui uma conta de títulos no banco.
+Conta de CD: Se o cliente possui uma conta de certificado de depósito (CD) no banco.
+Online: Se o cliente usa serviços bancários pela internet.
+Cartão de Crédito: Se o cliente usa um cartão de crédito emitido pelo UniversalBank.
 
-Variáveis categóricas:
-Personal loan (Yes/No): nossa variável target, indicando se o cliente aceitou a oferta de empréstimo pessoal
-Possui conta de investimento no banco?
-Possui conta de depósito a prazo (CD) no banco?
-Usa serviços bancários online?
-Usa cartão de crédito emitido pelo banco?
-Variáveis contínuas:
-Idade
-Anos de experiência profissional
-Renda anual
-Gasto médio no cartão de crédito
-Valor do empréstimo para moradia
-Tamanho da família
-Nível educacional
-Algumas observações importantes sobre essas variáveis:
+Características Contínuas:
+Idade: Idade do cliente.
+Experiência: Anos de experiência profissional.
+Renda: Renda anual em dólares.
+CCAvg: Gasto médio em cartões de crédito.
+Hipoteca: Valor da hipoteca da casa do cliente.
+Características Categóricas Ordinais:
+Família: Tamanho da família do cliente.
+Educação: Nível de educação do cliente.
 
-A variável ID do cliente não traz informações úteis para nosso modelo preditivo, por isso pode ser descartada
-O código postal também não é relevante uma vez que não podemos calcular a distância entre códigos postais
+► Metodologia
 
+Pré-processamento de Dados:
+Remoção de características irrelevantes, como o ID do cliente e o código postal.
+Análise estatística básica para entender a distribuição das variáveis.
 
-As principais etapas incluíram:
+Divisão dos Dados:
+Divisão do conjunto de dados em conjuntos de treinamento e teste para avaliação precisa do modelo.
 
-Entendimento dos dados
-Pré-processamento e transformação das variáveis
-Treinamento de modelos neurais no Scikit-Learn
-Otimização dos hiperparâmetros com Grid Search
-Interpretação do modelo final
+Padronização de Características:
+Padronização das características contínuas para garantir que estivessem na mesma escala, fundamental para redes neurais.
+
+Treinamento do Modelo:
+Utilização de um classificador Multi-Layer Perceptron (MLP), um tipo de rede neural, para construir o modelo preditivo.
+Ajuste da arquitetura da rede neural, incluindo o número de camadas ocultas e neurônios por camada, e funções de ativação para melhor desempenho.
+
+Avaliação do Modelo:
+Avaliação do desempenho do modelo usando métricas como acurácia e F1 Score.
+Resultados impressionantes com uma acurácia de aproximadamente 98.1% e um F1 Score de cerca de 89.84%.
+
+Conclusão
+Este projeto demonstra a eficácia das redes neurais na previsão da aceitação de empréstimos pessoais com base nas características do cliente. Ao aproveitar técnicas avançadas de aprendizado de máquina, as instituições financeiras podem tomar decisões informadas sobre aprovações de empréstimos, otimizando suas operações e aumentando a satisfação do cliente.
+
+Para mais informações ou discussões sobre este projeto, não hesite em entrar em contato. Vamos continuar explorando soluções inovadoras através de inteligência artificial e aprendizado de máquina!
 
 ______________________________________________________________________________________________________________________________________________________________________________________________________________________
 
-Neural networks are computational models inspired by the functioning of biological neurons in the human brain. They are capable of learning complex patterns in input data and making accurate predictions.
-We will apply Neural Networks for credit analysis, in order to predict whether a customer will accept a personal loan offer or not.
+Predicting Personal Loan Acceptance using Neural Networks
+Overview
+This project focuses on predicting the acceptance of personal loans by customers using neural networks. The dataset contains various features related to customers' demographics, financial status, and banking behavior. Through careful analysis and modeling, we aim to build a predictive model that can assist financial institutions in identifying potential loan customers.
 
-To train our neural network model, we will use a database containing information about bank customers.
+Dataset Description
+The dataset consists of both categorical and continuous features:
 
-This information includes:
+Categorical Features:
+Personal Loan: Indicates whether the customer accepted the personal loan offered in the last campaign.
+Securities Account: Whether the customer has a securities account with the bank.
+CD Account: Whether the customer has a certificate of deposit (CD) account with the bank.
+Online: Whether the customer uses internet banking services.
+Credit Card: Whether the customer uses a credit card issued by UniversalBank.
 
-Categorical variables:
-Personal loan (Yes/No): our target variable, indicating whether the customer accepted the personal loan offer
-Does the customer have an investment account with the bank?
-Does the customer have a certificate of deposit (CD) account with the bank?
-Does the customer use online banking services?
-Does the customer use a credit card issued by the bank?
-Continuous variables:
-Age
-Years of professional experience
-Annual income
-Average credit card spending
-Mortgage loan amount
-Family size
-Educational level
-Some important observations about these variables:
+Continuous Features:
+Age: Age of the customer.
+Experience: Years of professional experience.
+Income: Annual income in dollars.
+CCAvg: Average spending on credit cards.
+Mortgage: Mortgage value of the customer's house.
+Ordinal Categorical Features:
+Family: Family size of the customer.
+Education: Education level of the customer.
+Methodology
+Data Preprocessing:
 
-The customer ID variable does not provide useful information for our predictive model, so it can be discarded.
-The postal code is also not relevant since we cannot calculate the distance between postal codes.
-The main steps included:
+Removed irrelevant features such as customer ID and zip code.
+Conducted basic statistical analysis to understand the distribution of variables.
+Data Splitting:
 
-Understanding the data
-Pre-processing and transformation of variables
-Training neural network models in Scikit-Learn
-Hyperparameter optimization with Grid Search
-Interpretation of the final model
+Divided the dataset into training and testing sets to evaluate model performance accurately.
+Feature Scaling:
 
+Standardized the continuous features to ensure they were on the same scale, which is crucial for neural networks.
+Model Training:
+
+Utilized a Multi-Layer Perceptron (MLP) classifier, a type of neural network, to construct the predictive model.
+Tuned the architecture of the neural network, including the number of hidden layers and neurons per layer, and activation functions for optimal performance.
+Model Evaluation:
+
+Evaluated the model's performance using metrics such as accuracy and F1 Score.
+Achieved impressive results with an accuracy of approximately 98.1% and an F1 Score of about 89.84%.
+Conclusion
+This project demonstrates the effectiveness of neural networks in predicting personal loan acceptance based on customer attributes. By leveraging advanced machine learning techniques, financial institutions can make informed decisions regarding loan approvals, thereby optimizing their operations and enhancing customer satisfaction.
+
+For further inquiries or discussions about this project, feel free to reach out. Let's continue exploring innovative solutions through artificial intelligence and machine learning!
