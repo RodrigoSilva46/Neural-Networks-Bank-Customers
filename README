@@ -32,3 +32,39 @@ Pré-processamento e transformação das variáveis
 Treinamento de modelos neurais no Scikit-Learn
 Otimização dos hiperparâmetros com Grid Search
 Interpretação do modelo final
+
+______________________________________________________________________________________________________________________________________________________________________________________________________________________
+
+Neural networks are computational models inspired by the functioning of biological neurons in the human brain. They are capable of learning complex patterns in input data and making accurate predictions.
+We will apply Neural Networks for credit analysis, in order to predict whether a customer will accept a personal loan offer or not.
+
+To train our neural network model, we will use a database containing information about bank customers.
+
+This information includes:
+
+Categorical variables:
+Personal loan (Yes/No): our target variable, indicating whether the customer accepted the personal loan offer
+Does the customer have an investment account with the bank?
+Does the customer have a certificate of deposit (CD) account with the bank?
+Does the customer use online banking services?
+Does the customer use a credit card issued by the bank?
+Continuous variables:
+Age
+Years of professional experience
+Annual income
+Average credit card spending
+Mortgage loan amount
+Family size
+Educational level
+Some important observations about these variables:
+
+The customer ID variable does not provide useful information for our predictive model, so it can be discarded.
+The postal code is also not relevant since we cannot calculate the distance between postal codes.
+The main steps included:
+
+Understanding the data
+Pre-processing and transformation of variables
+Training neural network models in Scikit-Learn
+Hyperparameter optimization with Grid Search
+Interpretation of the final model
+
